@@ -7,6 +7,11 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Apply the custom cursor to the entire website */
+body, * {
+    cursor: url('images/albinoCursor.cur') 16 16, auto; /* Path to your custom cursor */
+  }
+
 /* Sidebar */
 .sidebar {
   position: fixed; /* Initially fixed to the left */
@@ -90,17 +95,25 @@ body {
     color: white;
     font-size: 1rem; /* Initial font size */
     transition: transform 1s ease, font-size 1s ease;
+    transform: scale(1.5); /* Scale content by 35% */
+
   }
   
   .lastImage.expand .content {
     font-size: 2rem; /* Scale up the font size when expanded */
   }
   
-  /* Coin name styling */
-  .lastImage .content .coin-name {
-    font-size: 1.5rem; /* Initial font size */
+ /* Coin name styling */
+.lastImage .content .coin-name {
+    font-size: 3rem; /* Initial font size */
     font-weight: bold;
     transition: font-size 1s ease;
+    color: white; /* Ensure the text color is black */
+    text-shadow: 
+      2px 2px 0px rgba(0, 0, 0, 0.7), /* Shadow on the right and bottom */
+      -2px -2px 0px rgba(0, 0, 0, 0.7), /* Shadow on the left and top */
+      2px -2px 0px rgba(0, 0, 0, 0.7), /* Shadow on top-right */
+      -2px 2px 0px rgba(0, 0, 0, 0.7); /* Shadow on bottom-left */
   }
   
   .lastImage.expand .coin-name {
